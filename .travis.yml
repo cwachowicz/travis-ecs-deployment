@@ -10,4 +10,4 @@ after_success:
   - docker tag $REPO:$COMMIT $REPO:$TAG
 after_script:
   - chmod +x ecs-deploy.sh
-  - ./ecs-deploy.sh -c default -n hubot -i cwac/hubot-slack-localz --region eu-west-1
+  - bash ecs-deploy.sh -c default -n hubot -i cwac/hubot-slack-localz --region eu-west-1
