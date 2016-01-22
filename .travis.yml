@@ -2,8 +2,6 @@ sudo: required
 language: generic
 services:
   - docker
-script:
-  - docker-compose build
 after_success:
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD
   - export REPO=cwac/hubot-slack-localz
